@@ -19,6 +19,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in RFC 2119.
 
+Please the change the name of this protocol, because it can cause confusion.
+The name "BetterHash" is already in use since the middle of 2017 by publicly
+available (and probably trademarked) mining software.
+
 ==Motivation==
 
 The Bitcoin mining landscape has many pressures that encourage centralization. One of the vectors by which these pressures are sustained is through the most widely deployed mining protocol: Stratum. Difficult to implement and poorly documented, the design of the Stratum protocol requires pool operators to build and distribute block templates to their clients. Without a diverse body of miners constructing block templates, the network's censorship resistance is jeopardized (e.g. pool operators may use their position of power to restrict the flow of protocol upgrades). The cause for concern around these centralizing forces are further exacerbated by the lack of a cryptographically authenticated connection between the server and client, a vector for temporal attacks (e.g. MiTM) that allow malicious parties to silently gain control of hashpower until the pool operator and/or other miners intervene. Additionally, the simple implementation of the Stratum client requires each miner to be pointed to a commonly shared Stratum server, resulting in a flood of individual connections to each pool.
